@@ -1,13 +1,13 @@
 var nodeio = require('node.io');
 var cradle = require('cradle');
-var db = new(cradle.Connection)('http://gast:gast@aben.iriscouch.com', 5984, {
+var db = new(cradle.Connection)('http://couch.com', 5984, {
       cache: true,
       raw: false
-  }).database('scraperoutput');
+  }).database('exampleDB');
 var methods = {
     input: true,
     run: function() {
-        this.getHtml('http://wiki.piratenpartei.de/BE:Crews/Crewmap', function(err, $) {
+        this.getHtml('http://example.com', function(err, $) {
 
             //Handle any request / parsing errors
             if (err) this.exit(err);
