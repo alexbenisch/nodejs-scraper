@@ -39,4 +39,3 @@ var methods = {
     }
 }
 exports.job = new nodeio.Job(methods);
-//exports.job = new nodeio.Job({timeout:15}, methods); Resultierte in einem ERROR: Error: ETIMEDOUT
